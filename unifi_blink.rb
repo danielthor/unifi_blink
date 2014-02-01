@@ -7,7 +7,7 @@ target_hostnames = ['iPhone-5s']
 # consider recently connected if uptime within
 recent_time = 60 * 2 # 2 minutes
 
-base_url = "https://tretti-dc02.tretti.local:8443"
+base_url = "https://<ap controler hostname>:8443"
 username = ""
 password = ""
 
