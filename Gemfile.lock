@@ -1,0 +1,27 @@
+GIT
+  remote: git://github.com/danielthor/blink_stick.git
+  revision: 0e77dafd70575c6628d8e82d3beec0ab2a5423b3
+  specs:
+    blink_stick (0.0.1)
+      libusb (~> 0.4)
+
+GEM
+  remote: https://rubygems.org/
+  specs:
+    ffi (1.9.3)
+    httpi (2.1.0)
+      rack
+      rubyntlm (~> 0.3.2)
+    json (1.8.1)
+    libusb (0.4.0)
+      ffi (>= 1.0)
+    rack (1.5.2)
+    rubyntlm (0.3.4)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  blink_stick!
+  httpi
+  json
