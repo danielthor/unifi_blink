@@ -1,6 +1,7 @@
 require 'rubygems'
 require 'bundler/setup'
 Bundler.require(:default)
+require 'json'
 
 # hostname to look for
 target_hostnames = ['iPhone-5s']
