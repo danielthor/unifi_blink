@@ -62,7 +62,6 @@ loop do
 
     puts "No (new) targets found. Sleepig..." if target_found == 0
   rescue Exception => e
-    raise e
     puts "EXCEPTION! #{e}"
     puts "Gotta catch em' all! Continuing..."
   end
