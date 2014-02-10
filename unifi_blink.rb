@@ -46,14 +46,14 @@ loop do
     parsed_data = JSON.parse(data_response.body)
 
     # collect connected hosts and uptime
-    connected_hosts = parsed_data['data'].collect { |c| [c['hostname'], c['_uptime']]  }
+    connected_hosts = parsed_data['data'].collect { |c| [c['hostname'], c['uptime']]  }
 
     target_found = 0
 
     # find recently connected target hostnames
     connected_hosts.each do |hostname, uptime|
-      if targets.keys.include?(hostname) and uptime <= recent_time
-        puts "#{hostname} found! BLINK!"
+      if targets.keys.include?(hostname) and uptime and uptime <= recent_time
+        puts "#{hostname} found (uptime #{uptime})! BLINK!"
         target_found = 1
         blink_stick.blink(color: targets[hostname][:color], blink: 10)
         blink_stick.off
